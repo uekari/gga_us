@@ -7,4 +7,10 @@
     ※ 書き換えや追加の場合、変更後に下記コマンドを打つ。
         ./vendor/bin/sail php artisan migrate:fresh
 
-＃あああ
+
+＃何のファイルかメモ
+    ・index.blade.php（一覧画面）
+    ・create.blade.php（作成画面）
+    ・show.blade.php（詳細画面）
+    ・edit.blade.php（編集画面）
+    
