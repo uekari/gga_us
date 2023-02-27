@@ -1,0 +1,10 @@
+＃マイグレーションによるテーブル追加
+    ①「モデル」と「マイグレーションファイル」を作成する
+        ./vendor/bin/sail php artisan make:model (Table名) -m
+    ②作成されたファイルの中にカラムを追加
+    ③マイグレーションする
+        ./vendor/bin/sail php artisan migrate
+    ※ 書き換えや追加の場合、変更後に下記コマンドを打つ。
+        ./vendor/bin/sail php artisan migrate:fresh
+
+＃あああ
