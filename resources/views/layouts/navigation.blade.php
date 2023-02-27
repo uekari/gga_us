@@ -13,10 +13,25 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Dash!board') }}
                     </x-nav-link>
                 </div>
             </div>
+            
+            
+            <!-- Userページ -->
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <x-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">
+                    {{ __('User!Page') }}
+                </x-nav-link>
+            </div>
+            <!-- 案件ページ -->
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <x-nav-link :href="route('plan.index')" :active="request()->routeIs('plan.index')">
+                    {{ __('案件!Page') }}
+                </x-nav-link>
+            </div>
+
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -69,6 +84,19 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <!-- user -->
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">
+                {{ __('User！Page') }}
+            </x-responsive-nav-link>
+        </div>
+        <!-- 案件 -->
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('plan.index')" :active="request()->routeIs('plan.index')">
+                {{ __('案件!Page') }}
             </x-responsive-nav-link>
         </div>
 
