@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PlanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// 試しに書いてみる！
+Route::resource('user', UserController::class);
+Route::resource('plan', PlanController::class);
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+// 「/dashboard にアクセスすると {} の処理(＝ブラウザに dashboard という名前のVewのファイルを返す)を実行する」という意味
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
