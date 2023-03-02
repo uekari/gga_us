@@ -13,4 +13,5 @@
     ・create.blade.php（作成画面）
     ・show.blade.php（詳細画面）
     ・edit.blade.php（編集画面）
-    
+
+＃どうしたものか・・・
