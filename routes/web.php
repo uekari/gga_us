@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PlanController;
+use App\Http\Controllers\HospitalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\PlanController;
 // 試しに書いてみる！
 Route::resource('user', UserController::class);
 Route::resource('plan', PlanController::class);
+Route::resource('hospital', HospitalController::class);
 
 
 Route::get('/', function () {
