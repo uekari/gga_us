@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
+            // カラムは下記に記載、その後「./vendor/bin/sail php artisan migrate:fresh」のコマンドを打つ。
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
