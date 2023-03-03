@@ -14,6 +14,28 @@
     ・show.blade.php（詳細画面）
     ・edit.blade.php（編集画面）
 
+＃github手順
+    ①pullする
+        git pull origin develop
+    ②branch切る（※ 必ずpullした後に!!!）
+        git branch (リモートbranch名)
+    ③switchでリモートbranchに移動
+        git switch (リモートbranch名)
+    ④内容書き換える
+    ⑤リモートbranchにpushする
+        git add .
+        git commit -m"追加・変更した内容のメモ"
+        git push origin (リモートbranch)
+    ⑥プルリクエスト送る
+        リモートbranch → develop
+        （※ mainに送らないように注意!!!）
+    ⑦mergeして、リモートbranchを削除する
+    ⑧一旦developに移動して、ローカルbranchを削除する
+        git switch develop
+        git branch -d (リモートbranch名)
+
+
+        
 ＃どうしたものか・・・
 ＃どうしたものか・・・
 ＃どうしたものか・・・
