@@ -15,9 +15,19 @@
           <form class="mb-6" action="{{ route('hospital.store') }}" method="POST">
             @csrf
             <div class="flex flex-col mb-4">
+
               <x-input-label for="hospital_name" :value="__('病院名')" />
               <x-text-input id="hospital" class="block mt-1 w-full" type="text" name="hospital_name" :value="old('hospital_name')" required autofocus />
               <x-input-error :messages="$errors->get('hospital_name')" class="mt-2" />
+
+              <x-input-label for="hospital_name" :value="__('住所')" />
+              <x-text-input id="hospital" class="block mt-1 w-full" type="text" name="hospital_name" :value="old('hospital_name')" required autofocus />
+              <x-input-error :messages="$errors->get('address')" class="mt-2" />
+
+              <x-input-label for="hospital_name" :value="__('電話番号')" />
+              <x-text-input id="hospital" class="block mt-1 w-full" type="text" name="hospital_name" :value="old('hospital_name')" required autofocus />
+              <x-input-error :messages="$errors->get('tel')" class="mt-2" />
+              
             </div>
             <!-- <div class="flex flex-col mb-4">
               <x-input-label for="description" :value="__('Description')" />
