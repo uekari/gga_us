@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('tel');
             $table->string('fax');
+            $table->timestamps();
         });
     }
 

@@ -13,9 +13,10 @@ class HospitalController extends Controller
      */
     public function index()
     {
-        // return view('hospitals.index');
-        $hospitals = [];
-        return view('hospital.index',compact('hospitals'));
+
+        $hospitals = Hospital::getAllOrderByUpdated_at();
+        // ddd($hospitals);
+        return response()->view('hospital.index',compact('hospitals'));
     }
 
     /**
@@ -23,7 +24,7 @@ class HospitalController extends Controller
      */
     public function create()
     {
-         return view('hospital.create');
+        return view('hospital.create');
     }
 
     /**
@@ -37,7 +38,6 @@ class HospitalController extends Controller
         'address' => 'required | max:255',
         'tel' => 'required | max:255',
         'fax' => 'required | max:255',
-        // 'description' => 'required',
     ]);
     // バリデーション:エラー
     if ($validator->fails()) {
@@ -56,9 +56,12 @@ class HospitalController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($hospital_id)
     {
-        //
+        // ddd($hospital_id);
+        $hospital = Hospital::find($hospital_id);
+        ddd($hospital);
+        return response()->view('hospital.show', compact('hospital'));
     }
 
     /**
