@@ -12,12 +12,12 @@ class Hospital extends Model
 
     protected $guarded = [
     'id',
-    // 'created_at',
-    // 'updated_at',
+    'created_at',
+    'updated_at',
   ];
 // 🔽 追加
-//   public static function getAllOrderByUpdated_at()
-//   {
-//     return self::orderBy('updated_at', 'desc')->get();
-//   }
-}   
+  public static function getAllOrderByUpdated_at()
+  {
+    return self::orderBy('updated_at', 'desc')->get();
+  }
+}
