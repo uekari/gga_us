@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Treatment extends Model
+class Risk extends Model
 {
     use HasFactory;
 
     // 追加
-    public function users()
+    public function times()
     {
-        return $this->belongsToMany(User::class)->withTimestamps();
+        return $this->belongsToMany(Time::class)->withTimestamps();
     }
 }
