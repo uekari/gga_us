@@ -45,11 +45,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('login', [AdminLoginController::class, 'login']);
 
     // 以下の中は認証必須のエンドポイントとなる
-    // Route::middleware(['auth:admin'])->group(function () {
-    //     // ダッシュボード
-    //     Route::get('dashboard', fn() => view('admin.dashboard'))
-    //         ->name('admin.dashboard');
-    // });
+    Route::middleware(['auth:admin'])->group(function () {
+        // ダッシュボード
+        Route::get('dashboard', fn() => view('admin.dashboard'))
+            ->name('admin.dashboard');
+    });
 
 });
 
