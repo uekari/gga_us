@@ -16,17 +16,34 @@
               </tr>
             </thead>
             <tbody>
-              @foreach ($hospitals as $hosptal)
+              @foreach ($hospitals as $hospital)
               <tr class="hover:bg-grey-lighter">
                 <td class="py-4 px-6 border-b border-grey-light">
-                  <h3 class="text-left font-bold text-lg text-grey-dark">{{$hosptal->hosptal}}</h3>
+                  <a href="{{ route('hospital.show',$hospital->hospital_id) }}">
+                    <h3 class="text-left font-bold text-lg text-gray-dark dark:text-gray-200">{{$hospital->hospital_name}}</h3>
+                  </a>
                   <div class="flex">
                     <!-- 更新ボタン -->
                     <!-- 削除ボタン -->
                   </div>
+                  <!-- <div>
+                    <div class="flex">
+                      <p>住所：</p>
+                      <p class="text-left text-grey-dark">{{$hospital->address}}</p>
+                    </div>
+                    <div class="flex">
+                      <p>TEL：</p>
+                      <p class="text-left text-grey-dark">{{$hospital->tel}}</p>
+                    </div>
+                    <div class="flex">
+                      <p>FAX：</p>
+                      <p class="text-left text-grey-dark">{{$hospital->fax}}</p>
+                    </div>
+                  </div> -->
                 </td>
               </tr>
               @endforeach
+
             </tbody>
           </table>
         </div>
