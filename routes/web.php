@@ -45,13 +45,28 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('login', [AdminLoginController::class, 'login']);
 
     // 以下の中は認証必須のエンドポイントとなる
-    // Route::middleware(['auth:admin'])->group(function () {
-    //     // ダッシュボード
-    //     Route::get('dashboard', fn() => view('admin.dashboard'))
-    //         ->name('admin.dashboard');
-    // });
+    Route::middleware(['auth:admin'])->group(function () {
+        // ダッシュボード
+        Route::get('dashboard', fn() => view('admin.dashboard'))
+            ->name('admin.dashboard');
+    });
+
 
 });
+
+// Route::prefix('admin')->name('admin.')->group(function(){
+//     Route::get('/dashboard', function () {
+//         return view('admin.dashboard');
+//     })->middleware(['auth:admin', 'verified'])->name('dashboard');
+
+//     Route::middleware('auth:admin')->group(function () {
+//         Route::get('/profile', [ProfileOfAdminController::class, 'edit'])->name('profile.edit');
+//         Route::patch('/profile', [ProfileOfAdminController::class, 'update'])->name('profile.update');
+//         Route::delete('/profile', [ProfileOfAdminController::class, 'destroy'])->name('profile.destroy');
+//     });
+
+//     require __DIR__.'/admin.php';
+// });
 
 
 
