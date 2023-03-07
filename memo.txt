@@ -29,6 +29,10 @@
     ⑥プルリクエスト送る
         リモートbranch → develop
         （※ mainに送らないように注意!!!）
+        （※ mainに送らないように注意!!!）
+        （※ mainに送らないように注意!!!）
+        （※ mainに送らないように注意!!!）
+        （※ mainに送らないように注意!!!）
     ⑦mergeして、リモートbranchを削除する
     ⑧一旦developに移動して、ローカルbranchを削除する
         git switch develop

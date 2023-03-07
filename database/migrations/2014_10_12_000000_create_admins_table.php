@@ -1,3 +1,5 @@
+<!-- admin：管理者 -->
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
