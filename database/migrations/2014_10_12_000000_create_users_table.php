@@ -1,3 +1,5 @@
+<!-- 元々あるやつ（放置） -->
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;

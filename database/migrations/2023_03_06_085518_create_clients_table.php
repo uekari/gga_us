@@ -1,4 +1,4 @@
-<!-- Supporter：サポーター -->
+<!-- client：患者 -->
 
 <?php
 
@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('supporters', function (Blueprint $table) {
-            $table->id();
+        Schema::create('clients', function (Blueprint $table) {
+            $table->id('client_id');
+            $table->string('client_name');
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('supporters');
+        Schema::dropIfExists('clients');
     }
 };
