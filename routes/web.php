@@ -32,6 +32,8 @@ Route::resource('hospital', HospitalController::class);
 |--------------------------------------------------------------------------
 */
 Route::group(['prefix' => 'admin'], function () {
+
+
     // 登録
     Route::get('register', [AdminRegisterController::class, 'create'])
         ->name('admin.register');
