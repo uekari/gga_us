@@ -26,6 +26,12 @@ Route::resource('user', UserController::class);
 Route::resource('plan', PlanController::class);
 Route::resource('hospital', HospitalController::class);
 
+
+// 管理者・サポーター選択ページ
+// getメソッドで https://.../loginselect にアクセスすると、Controllerのindexメソッドを呼び出す
+Route::get('/loginselect', [App\Http\Controllers\LoginselectController::class, 'index']);
+
+
 /*
 |--------------------------------------------------------------------------
 | 管理者用ルーティング
@@ -87,3 +93,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
